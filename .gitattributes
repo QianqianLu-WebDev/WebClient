@@ -3,7 +3,7 @@
 * text=auto
 
 # Force the following filetypes to have unix eols, so Windows does not break them
-* eol=lf
+* text eol=lf
 
 *.cs     text diff=csharp
 *.java   text diff=java
