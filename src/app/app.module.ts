@@ -9,12 +9,14 @@ import {MenubarModule} from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 
 import { InputTextModule } from 'primeng/inputtext';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    HttpClientModule,
     MenubarModule,
     MenuModule,
     ButtonModule,
