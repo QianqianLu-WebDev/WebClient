@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +34,10 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private auth: AuthService) {}
 
   ngOnInit() {
+    this.auth.login('amoyensis@outlook.com', '123456');
     // 是不是以斜杠起头无所谓，但是一定要以api/起头
     this.http.get('/api/user').subscribe(res => {
       console.log(res);

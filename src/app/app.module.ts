@@ -10,6 +10,8 @@ import { ButtonModule } from 'primeng/button';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
+import { httpInterceptorProviders } from './auth';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService, httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
