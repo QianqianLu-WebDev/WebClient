@@ -26,15 +26,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Setup node
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:    
           node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm test
-      - run: npm run build
+      - name: Install Dependencies
+        run: npm install
+      - name: Test Script
+        run: npm test
+      - name: Run Script
+        run: npm run build
 
 
       # Runs a single command using the runners shell
-      - name: Setup welcome
+      - name: Setup Welcome
         run: echo A WebClient Project!
