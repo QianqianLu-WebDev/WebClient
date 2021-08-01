@@ -31,11 +31,11 @@ jobs:
         with:    
           node-version: ${{ matrix.node }}
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
       - name: Test Script
-        run: npm test
+        run: yarn test
       - name: Run Script
-        run: npm run build
+        run: yarn run build
 
 
       # Runs a single command using the runners shell
